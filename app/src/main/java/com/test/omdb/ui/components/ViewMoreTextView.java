@@ -30,7 +30,7 @@ public class ViewMoreTextView extends TextView implements View.OnClickListener {
     @Override
     protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
 
-        // If text longer than MAX_LINES set DrawableBottom - I'm using '...' icon
+        // If text is longer than the MAX_LINES set DrawableBottom - I'm using '...' icon
         post(() -> {
             if (getLineCount() > MAX_LINES)
                 setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, R.drawable.ic_more_horizontal);

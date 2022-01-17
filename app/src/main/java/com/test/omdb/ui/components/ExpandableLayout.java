@@ -137,34 +137,6 @@ public class ExpandableLayout extends RelativeLayout {
         v.startAnimation(animation);
     }
 
-    public Boolean isOpened() {
-        return isOpened;
-    }
-
-    public void show() {
-        if (!isAnimationRunning) {
-            expand(contentLayout);
-            isAnimationRunning = true;
-            new Handler().postDelayed(() -> isAnimationRunning = false, duration);
-        }
-    }
-
-    public FrameLayout getHeaderLayout() {
-        return headerLayout;
-    }
-
-    public FrameLayout getContentLayout() {
-        return contentLayout;
-    }
-
-    public void hide() {
-        if (!isAnimationRunning) {
-            collapse(contentLayout);
-            isAnimationRunning = true;
-            new Handler().postDelayed(() -> isAnimationRunning = false, duration);
-        }
-    }
-
     @Override
     public void setLayoutAnimationListener(Animation.AnimationListener animationListener) {
         animation.setAnimationListener(animationListener);

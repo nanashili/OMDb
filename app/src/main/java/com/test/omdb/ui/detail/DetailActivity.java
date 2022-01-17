@@ -187,10 +187,4 @@ public class DetailActivity extends AppCompatActivity {
         super.onStart();
         OmdbPreferences.saveState("DetailActivity", search_type, search_id, search_title);
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        OmdbPreferences.saveState("DetailActivity", search_type, search_id, search_title);
-    }
 }

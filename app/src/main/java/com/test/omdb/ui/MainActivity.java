@@ -157,12 +157,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        OmdbPreferences.saveState("MainActivity", "", "", "");
-    }
-
-    @Override
     public void onBackPressed() {
         if (!isTaskRoot()) {
             super.onBackPressed();

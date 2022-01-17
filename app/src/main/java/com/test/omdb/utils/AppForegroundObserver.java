@@ -64,15 +64,6 @@ public final class AppForegroundObserver {
         }
     }
 
-    @AnyThread
-    public void removeListener(@NonNull Listener listener) {
-        listeners.remove(listener);
-    }
-
-    public boolean isForegrounded() {
-        return isForegrounded != null && isForegrounded;
-    }
-
     @MainThread
     private void onForeground() {
         isDestroyed = false;
