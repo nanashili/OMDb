@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OMDb" parent="@style/Theme.Material3.Light.NoActionBar">
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.OMDb.Chip.Filter" parent="Base.Widget.MaterialComponents.Chip">
+        <item name="android:checkable">true</item>
+
+        <item name="chipIconVisible">false</item>
+        <item name="closeIconVisible">false</item>
+
+        <item name="checkedIcon">@drawable/ic_mtrl_chip_checked_black</item>
+        <item name="checkedIconTint">@color/primaryTintColor</item>
+    </style>
+
+</resources>

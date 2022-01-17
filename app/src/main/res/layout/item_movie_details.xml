@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="#4BEF79"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        <TextView
+                android:id="@+id/seasons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:id="@+id/release"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/mulish_regular"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

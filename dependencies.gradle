@@ -1,0 +1,32 @@
+dependencyResolutionManagement  {
+    versionCatalogs {
+        libs {
+            version('androidx-lifecycle', '2.3.1')
+
+            // Android X
+            alias('androidx-appcompat').to('androidx.appcompat:appcompat:1.4.1')
+            alias('androidx-recyclerview').to('androidx.recyclerview:recyclerview:1.1.0')
+            alias('androidx-cardview').to('androidx.cardview:cardview:1.0.0')
+            alias('androidx-lifecycle-extensions').to('androidx.lifecycle:lifecycle-extensions:2.2.0')
+            alias('androidx-lifecycle-viewmodel-savedstate').to('androidx.lifecycle', 'lifecycle-viewmodel-savedstate').versionRef('androidx-lifecycle')
+            alias('androidx-lifecycle-common-java8').to('androidx.lifecycle', 'lifecycle-common-java8').versionRef('androidx-lifecycle')
+
+            // Material
+            alias('material-material').to('com.google.android.material:material:1.5.0-alpha05')
+
+            //Google
+            alias('google-gson').to('com.google.code.gson:gson:2.8.9')
+
+            // Third Party
+            alias('square-okhttp3').to('com.squareup.okhttp3:okhttp:3.12.10')
+            alias('glide-glide').to('com.github.bumptech.glide:glide:4.11.0')
+            alias('glide-transformations').to('jp.wasabeef:glide-transformations:4.3.0')
+        }
+
+        testLibs {
+            alias('junit-junit').to('junit:junit:4.13.2')
+            alias('androidx-test-ext-junit').to('androidx.test.ext:junit:1.1.1')
+            alias('espresso-core').to('androidx.test.espresso:espresso-core:3.2.0')
+        }
+    }
+}

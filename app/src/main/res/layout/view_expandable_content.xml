@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.test.omdb.ui.components.details.MovieContentDetails
+        android:id="@+id/movieContentDetails"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_regular"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:id="@+id/writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:id="@+id/actors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:id="@+id/awards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+    <TextView
+            android:id="@+id/dvd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="10dp"/>
+
+</com.test.omdb.ui.components.details.MovieContentDetails>

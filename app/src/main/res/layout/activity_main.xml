@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondaryBackgroundColor">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/search_query"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/bg_search_query"
+                        android:fontFamily="@font/mulish_regular"
+                        android:textColor="@color/primaryTextColor"
+                        android:hint="Search for movies/series"
+                        android:textColorHint="@color/primaryTextColor"
+                        android:padding="14dp"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/search"/>
+
+                <ImageView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/bg_search_button"
+                        android:layout_centerVertical="true"
+                        android:padding="14dp"
+                        app:tint="@color/white"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:singleSelection="true"
+                    app:selectionRequired="true"
+                    app:checkedChip="@id/chip_any"
+                    android:layout_gravity="center">
+
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_any"
+                        style="@style/Theme.OMDb.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Any"
+                        android:textColor="@color/primaryTextColor"
+                        android:fontFamily="@font/mulish_regular"
+                        app:chipBackgroundColor="@color/chipsColor"
+                        app:chipStrokeWidth="0dp"/>
+
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_movies"
+                        style="@style/Theme.OMDb.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movies"
+                        android:textColor="@color/primaryTextColor"
+                        android:fontFamily="@font/mulish_regular"
+                        app:chipBackgroundColor="@color/chipsColor"
+                        app:chipStrokeWidth="0dp" />
+
+                <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_series"
+                        style="@style/Theme.OMDb.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Series"
+                        android:textColor="@color/primaryTextColor"
+                        android:fontFamily="@font/mulish_regular"
+                        app:chipBackgroundColor="@color/chipsColor"
+                        app:chipStrokeWidth="0dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+
+        <include
+                android:id="@+id/search_now"
+                layout="@layout/state_empty_search"/>
+
+        <include
+                android:id="@+id/search_empty"
+                android:visibility="gone"
+                layout="@layout/state_empty_search_result"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+            android:id="@+id/loading_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="#0961E5"/>
+
+</RelativeLayout>

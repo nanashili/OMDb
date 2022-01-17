@@ -1,0 +1,12 @@
+enableFeaturePreview('VERSION_CATALOGS')
+
+rootProject.name = 'OMDb'
+include ':app'
+
+project(':app').name = 'OMDb-Android'
+
+apply from: 'dependencies.gradle'
+
+
+
+

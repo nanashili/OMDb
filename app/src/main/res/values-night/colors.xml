@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryTextColor">@color/white</color>
+    <color name="primaryTintColor">@color/white</color>
+    <color name="backgroundColor">#1C1C1C</color>
+    <color name="secondaryBackgroundColor">#1F1F20</color>
+    <color name="searchBackgroundColor">#383838</color>
+    <color name="chipsColor">#383838</color>
+</resources>
